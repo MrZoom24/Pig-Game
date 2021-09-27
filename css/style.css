@@ -1,0 +1,216 @@
+/* Header & Button fonts */
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap");
+
+/* Font sizes: 
+    PC (paragraph: #px (#rem); h2: 20px (2rem); h3: #px (#rem));
+    LAPTOP (paragraph: #px (#rem); h2: #px (#rem); h3: #px (#rem));
+    MOBILE (paragraph: #px (#rem); h2: #px (#rem); h3: #px (#rem))
+*/
+:root {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  background-color: #2f2f4b;
+  color: #05e7f1;
+}
+
+/* line-height is used to match text with images center X axis */
+header {
+  background-color: #222337;
+  font-size: 2rem;
+  line-height: 110%;
+  font-family: "Secular One", sans-serif;
+}
+
+/* this div is used because I don't want to have full screen header at big screens, but if I set header's width to 70%, then top color isn't one color, (kinda hard to explain) so yeah, I use this element to overcome previous problem */
+#header--div {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* That's were every div except header goes. It got flex layout, so everything is in the middle and also there's no need to use media queries, unless I want to optimize for smartphone's screens. Oh also, height isn't responsive as intended, no idea how to make it 100% responsive, but 90vh will do the work */
+section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  margin: auto;
+  height: 90vh;
+}
+
+/* TODO: player card currently is only mark up, no design at all */
+.player {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+  height: 80%;
+  background-color: #222337;
+  opacity: 0.6;
+  border-radius: 8px;
+  text-align: center;
+  font-family: "Gemunu Libre", sans-serif;
+}
+
+.player--active {
+  opacity: 1;
+}
+
+.player--winner {
+  background-color: #05e7f1;
+  color: #222337;
+  border: 3px solid rgb(0, 255, 0);
+}
+
+.player--winner > .player-border {
+  border: 2px solid #222337;
+  border-radius: 8px;
+}
+
+.player-border {
+  width: 100%;
+  height: auto;
+  border: 2px solid #05e7f1;
+  border-radius: 8px;
+}
+
+.player-name {
+  font-size: 4rem;
+  line-height: 110%;
+}
+
+.player-score {
+  font-size: 8rem;
+  line-height: 110%;
+  font-family: "Gemunu Libre", sans-serif;
+}
+
+.player-current-score {
+  font-size: 6rem;
+  line-height: 110%;
+  font-family: "Gemunu Libre", sans-serif;
+}
+
+/* this div will have two vertically aligned child divs, that's why I used flex. also it doesn't need any design, not even border, I will get rid of it soon. It will be just transparent, to make child divs position correctly without using grid */
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  height: 80%;
+}
+
+/* TODO: Both "controls" and "dice" are currently mark up, they don't need border, but they sure do need design */
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 85%;
+  height: 50%;
+  background-color: #222337;
+  border-radius: 8px;
+}
+
+button {
+  width: 70%;
+  height: auto;
+  display: block;
+  margin: auto;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-size: 3rem;
+  font-family: "Secular One", sans-serif;
+  color: #05e7f1;
+  background: transparent;
+  border: 0.3rem solid #05e7f1;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+.dice {
+  width: 50%;
+}
+
+.dice-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 1220px) {
+  #header--div {
+    width: 90%;
+  }
+
+  section {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  :root {
+    font-size: 8px;
+  }
+
+  .logo {
+    width: 40%;
+  }
+
+  .dice {
+    width: 80%;
+  }
+
+  .controls {
+    width: 100%;
+  }
+
+  #header--div {
+    width: 98%;
+  }
+
+  section {
+    width: 98%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  :root {
+    font-size: 6px;
+  }
+
+  section {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .player {
+    width: 50%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .controls {
+    width: 100%;
+    padding: 30%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  .dice {
+    margin-top: 3rem;
+  }
+}

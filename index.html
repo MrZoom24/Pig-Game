@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Header, with my logo and name of game -->
+    <header>
+      <div id="header--div">
+        <img src="logo.png" class="logo" />
+        <h2>Pig Game</h2>
+      </div>
+    </header>
+    <!-- Two Player divs, Player 1 on left and Player 2 on right. Each one will have Player text, current score and total score -->
+    <!-- In the "middle" div, there is 2 divs, upper one shows dice image and bottom one has buttons-->
+    <!-- TODO:  add place holder text and dice image and add buttons in "controls" div-->
+    <section>
+      <div class="player player-0 player--active">
+        <div class="player-border">
+          <h2 class="player-name">Player 1</h2>
+        </div>
+        <h2 class="player-score" id="score-0">0</h2>
+        <div class="player-border">
+          <h2 class="player-current-score" id="current-score-0">0</h2>
+        </div>
+      </div>
+      <div class="middle">
+        <div class="dice">
+          <img src="./images/dice-5.png" class="dice-image" />
+        </div>
+        <!-- upper button: Play again; middle button: hold; bottom button: roll; -->
+        <div class="controls">
+          <div id="controls-upper-div">
+            <button class="again">Play Again</button>
+          </div>
+          <div id="controls-lower-div">
+            <button class="hold">Hold</button>
+            <button class="roll">Roll</button>
+          </div>
+        </div>
+      </div>
+      <div class="player player-1">
+        <div class="player-border">
+          <h2 class="player-name">Player 2</h2>
+        </div>
+        <h2 class="player-score" id="score-1">0</h2>
+        <div class="player-border">
+          <h2 class="player-current-score" id="current-score-1">0</h2>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
