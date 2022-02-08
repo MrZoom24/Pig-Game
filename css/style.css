@@ -43,7 +43,6 @@ section {
   height: 90vh;
 }
 
-/* TODO: player card currently is only mark up, no design at all */
 .player {
   display: flex;
   flex-direction: column;
@@ -107,7 +106,6 @@ section {
   height: 80%;
 }
 
-/* TODO: Both "controls" and "dice" are currently mark up, they don't need border, but they sure do need design */
 .controls {
   display: flex;
   flex-direction: column;
